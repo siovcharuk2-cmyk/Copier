@@ -1,6 +1,7 @@
 #pragma once
 #include "Scanner.h"
 #include "Printer.h"
+#include "PoweredDevice.h"
 #include <iostream>
 
 class Copier :
@@ -11,12 +12,15 @@ private:
 
 public:
     Copier(int powerConsumption, int resolution, int printSpeed, int maxCopies)
-        : Scanner{ powerConsumption, resolution },
+        : PoweredDevice{ powerConsumption },
+        Scanner{ powerConsumption, resolution },
         Printer{ powerConsumption, printSpeed },
         maxCopies{ maxCopies }
     {
         std::cout << "[Copier] Constructor\n\n";
     }
+
+    Copier() = default;
 
     void makeCopy(int count)
     {

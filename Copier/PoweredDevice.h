@@ -15,6 +15,8 @@ public:
         std::cout << "[PoweredDevice] Constructor\n";
     }
 
+    PoweredDevice() = default;
+
     void turnOn()
     {
         if (!isOn)

@@ -3,7 +3,7 @@
 #include <iostream>
 
 class Scanner :
-    public PoweredDevice
+    virtual public PoweredDevice
 {
 protected:
     int resolution;
@@ -15,6 +15,8 @@ public:
     {
         std::cout << "[Scanner] Constructor\n";
     }
+
+    Scanner() = default;
 
     void scan()
     {

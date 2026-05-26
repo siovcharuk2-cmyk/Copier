@@ -3,7 +3,7 @@
 #include <iostream>
 
 class Printer :
-	public PoweredDevice
+	virtual public PoweredDevice
 {
 protected:
 	int printSpeed;
@@ -15,6 +15,8 @@ public:
     {
         std::cout << "[Printer] Constructor\n";
     }
+
+    Printer() = default;
 
     void print()
     {
